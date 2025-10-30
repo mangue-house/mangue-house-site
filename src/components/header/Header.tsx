@@ -1,7 +1,7 @@
 
 const Header = () => {
     return (
-        <header className={'px-6 fixed top-14 left-1/2 translate-x-[-50%] flex justify-between w-[72rem] h-[6.5rem] bg-primary-03 rounded-2xl'}>
+        <header className={'px-6 fixed top-14 left-1/2 translate-x-[-50%] flex justify-between w-6xl h-26 bg-primary-03 rounded-2xl z-50'}>
             <div className={'flex items-center'}>
                 <a href="#"><img src="../../../public/manguinho.svg" className={'pointer-events-none'} width={57} height={54} alt="Logo"/></a>
             </div>

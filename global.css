@@ -13,23 +13,15 @@
         font-family: 'Poppins', sans-serif;
     }
 
-    h1 {
-        font-size: 5rem;
-        font-weight: 700;
-    }
-
-    p, span {
-        font-family: 'montserrat', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 400;
-    }
-
 }
 
 .text-primary-01 {
     color: var(--color-primary-01);
 }
 
+.bg-primary-01 {
+    background-color: var(--color-primary-01);
+}
 .bg-primary-03 {
     background-color: var(--color-primary-03);
 }
