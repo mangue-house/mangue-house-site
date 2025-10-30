@@ -1,22 +1,27 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
 
 :root {
-    /*CORES*/
     --color-primary-01: #FF0033;
     --color-primary-02: #F2F2F2;
     --color-primary-03: #212121;
 
-
-    /*FONTES*/
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Poppins', sans-serif;
-    }
-
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
 
 .text-primary-01 {
     color: var(--color-primary-01);
+}
+
+.text-primary-02 {
+    color: var(--color-primary-02);
 }
 
 .bg-primary-01 {
