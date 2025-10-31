@@ -1,6 +1,7 @@
 import '../global.css'
 import Headerv2 from "./components/header/Headerv2.tsx";
 import Aside from "./components/aside/Aside.tsx";
+import BannerHero from "./components/UI/BannerHero.tsx";
 
 const App = () => {
     return (
@@ -20,18 +21,8 @@ const App = () => {
 
                     <Aside/>
 
-                    <div
-                        className="absolute inset-0 flex flex-col justify-center items-center px-4 sm:px-8 md:px-20 z-10">
-                        <h1 className="text-2xl sm:text-3xl md:text-6xl font-medium leading-snug md:leading-tight text-white text-center max-w-[95vw] md:max-w-3xl">
-                            <span className="block">
-                              <span className="font-bold text-[#e5103f]">Raízes no código</span>
-                              <span className="ml-2 font-normal text-white">soluções</span>
-                            </span>
-                            <span className="block mt-2">
-                              <span className="font-normal text-white">que adaptam</span>
-                              <span className="ml-2 font-extrabold text-[#e5103f]">futuro sustentável</span>
-                            </span>
-                        </h1>
+                    <div className="absolute inset-0 flex flex-col justify-center items-center px-4 sm:px-8 md:px-20 z-10">
+                        <BannerHero title={'Da lama ao deploy 🦀'} description={'Conte com a gente para tirar do papel ou sulocionar seu problema'}/>
                     </div>
 
                 </section>
@@ -46,7 +37,7 @@ const App = () => {
                                     Do mangue ao código
                                 </h2>
                                 <p className='text-white text-[1rem] md:text-2xl'>
-                                    Na <b>Mangue House</b>, não apenas codificamos:
+                                    Na <b className='bg-gradient-to-l from-red-500 via-red-600 to-blue-700 bg-clip-text text-transparent'>Mangue House</b>, não apenas codificamos:
                                     criamos ecossistemas digitais. Nossos
                                     softwares possuem a resiliência do mangue,
                                     adaptando-se ao seu terreno e criando raízes
@@ -61,7 +52,7 @@ const App = () => {
                             </div>
 
                             <div className='md:w-1/2'>
-                                <img src="/app/section_02.png" alt="coding" width={550} height={500}/>
+                                <img className='pointer-events-none' src="/app/section_02.png" alt="coding" width={550} height={500}/>
                             </div>
                         </div>
                     </div>

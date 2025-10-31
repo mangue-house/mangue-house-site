@@ -9,6 +9,8 @@
     font-smooth: antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    background: var(--color-primary-03);
 }
 
 h1, h2, h3, h4, h5, h6 {
