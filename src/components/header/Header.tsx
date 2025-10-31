@@ -1,18 +1,40 @@
+import { useEffect, useState } from "react";
+import '../../../global.css'
 
 const Header = () => {
-    return (
-        <header className={'rounded-2xl z-50 bg-primary-03 fixed top-6 md:top-14 left-1/2 translate-x-[-50%] flex justify-center w-[90%]  md:justify-between md:px-6 md:w-6xl md:h-26'}>
-            <div className={'flex items-center'}>
-                <a href="#"><img src="/app/manguinho.svg" className={'pointer-events-none w-8 md:w-14 py-2'} alt="Logo"/></a>
-            </div>
+    const [showHeader, setShowHeader] = useState(true);
+    const [lastScroll, setLastScroll] = useState(0);
 
-            <div className={'hidden md:flex items-center flex-end gap-6'}>
-                <a href="#"><h2 className={'text-white'}>Quem somos</h2></a>
-                <a href="#"><h2 className={'text-white'}>Membros</h2></a>
-                <a href="#"><h2 className={'text-primary-01 font-bold'}>Projetos</h2></a>
+    useEffect(() => {
+        const onScroll = () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                setShowHeader(false);
+            } else {
+                setShowHeader(true);
+            }
+            setLastScroll(currentScroll);
+        };
+
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [lastScroll]);
+
+    return (
+        <header
+            className={`fixed top-0 z-50 w-full h-11 bg-primary-03/90 backdrop-blur-md transition-transform duration-300
+        ${showHeader ? "translate-y-0" : "-translate-y-full"}`}
+        >
+            <div className='w-full max-w-[1200px] flex justify-center md:justify-between items-center h-full mx-auto'>
+                <a href="#"><img src="/app/manguinho.svg" alt="logo" className='w-6 pointer-events-none' /></a>
+                <ul className='style-none hidden md:flex md:items-center md:gap-6'>
+                    <li><a href="#"><span className='text-primary-02'>Quem somos</span></a></li>
+                    <li><a href="#"><span className='text-primary-02'>Membros</span></a></li>
+                    <li><a href="#" className='text-primary-01'><span className='font-bold'>Projetos</span></a></li>
+                </ul>
             </div>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

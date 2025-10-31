@@ -32,3 +32,12 @@ h1, h2, h3, h4, h5, h6 {
 .bg-primary-03 {
     background-color: var(--color-primary-03);
 }
+
+@keyframes storybar {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+.animate-storybar {
+    animation: storybar linear forwards;
+}
+
