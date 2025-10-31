@@ -4,19 +4,38 @@ import Aside from "./components/aside/Aside.tsx";
 import BannerHero from "./components/UI/BannerHero.tsx";
 import Container from "./components/UI/Container.tsx";
 import ContainerStories from "./components/ContainerStories/ContainerStories.tsx";
+import {useEffect, useRef} from "react";
 
 const App = () => {
 
+    const videoRef = useRef<HTMLVideoElement>(null) ;
+
+    useEffect(() => {
+        const onScroll = () => {
+            if (videoRef.current) {
+                if (window.scrollY > 1000) {
+                    videoRef.current.pause();
+                } else {
+                    videoRef.current.play();
+                }
+            }
+        };
+
+        window.addEventListener("scroll", onScroll);
+        onScroll();
+
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
     return (
         <>
-
             <main className="h-screen w-screen">
                 <Header/>
                 <section className="relative h-full w-full overflow-hidden">
                     <video
                         src="/app/banner.mp4"
                         autoPlay
+                        ref={videoRef}
                         loop
                         muted
                         playsInline
@@ -26,7 +45,7 @@ const App = () => {
                     <Aside/>
 
                     <div className="absolute inset-0 flex flex-col justify-center items-center px-4 sm:px-8 md:px-20 z-10">
-                        <BannerHero title={'Da lama a nuvem 🦀'} description={'Conte com a gente para tirar do papel ou sulocionar seu problema'}/>
+                        <BannerHero title={'Da lama as nuvens 🦀'} description={'Conte com a gente para tirar do papel ou sulocionar seu problema'}/>
                     </div>
 
                 </section>

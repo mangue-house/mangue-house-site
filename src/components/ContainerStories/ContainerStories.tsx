@@ -30,7 +30,7 @@ const dados = [
     },
 ];
 
-const SLIDE_DURATION = 3000; // ms
+const SLIDE_DURATION = 6000; // ms
 
 const ContainerStories = () => {
     const [index, setIndex] = useState(0);
