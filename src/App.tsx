@@ -5,6 +5,7 @@ import BannerHero from "./components/UI/BannerHero.tsx";
 import Container from "./components/UI/Container.tsx";
 import ContainerStories from "./components/ContainerStories/ContainerStories.tsx";
 import {useEffect, useRef} from "react";
+import Button from "./components/UI/Button.tsx";
 
 const App = () => {
 
@@ -33,7 +34,7 @@ const App = () => {
                 <Header/>
                 <section className="relative h-full w-full overflow-hidden">
                     <video
-                        src="/app/banner.mp4"
+                        src="/app/banner_3.mp4"
                         autoPlay
                         ref={videoRef}
                         loop
@@ -68,10 +69,7 @@ const App = () => {
                                     soluções interconectadas e vivas, feitas para
                                     durar.
                                 </p>
-                                <button
-                                    className='cursor-pointer flex items-center justify-center bg-primary-01 h-10 md:h-16 px-4 py-3 rounded-2xl mt-6'>
-                                    <span className='font-bold text-white text-[1rem] md:text-2xl'>Massa, quero conversar!</span>
-                                </button>
+                                <Button icon={'../public/app/arrow.svg'} link={'#'} spanButton={'Massa, quero falar!'}/>
                             </div>
 
                             <div className='md:w-1/2'>
@@ -90,12 +88,7 @@ const App = () => {
                         <div className='h-full flex flex-col items-center justify-center'>
                             <h2 className='text-center text-primary-01 text-5xl font-bold'>Gostou do que viu?</h2>
                             <p className='text-primary-02 text-2xl pt-4'>Vem falar com a gente!</p>
-
-                            <div>
-                                <button className='cursor-pointer flex items-center justify-center bg-primary-01 h-10 md:h-16 px-4 py-3 rounded-2xl mt-6'>
-                                    <span className='font-bold text-white text-[1rem] md:text-2xl'>Massa, quero conversar!</span>
-                                </button>
-                            </div>
+                            <Button icon={'../public/app/arrow.svg'} link={'#'} spanButton={'Massa, quero falar!'}/>
                         </div>
                     </Container>
                 </section>

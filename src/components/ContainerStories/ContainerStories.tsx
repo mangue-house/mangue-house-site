@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Container from "../UI/Container.tsx";
 
 import '../../../global.css';
+import Button from "../UI/Button.tsx";
 
 const dados = [
     {
@@ -75,7 +76,8 @@ const ContainerStories = () => {
                             />
                         </div>
                     </div>
-                    <div className={`pt-4 flex flex-col justify-between w-full md:w-1/2 pl-4 opacity-0 transition-opacity duration-700 ${ativo ? 'opacity-100' : 'opacity-0'}`}>
+
+                    <div className={`pt-4 pl-0 md:pl-6 flex flex-col justify-between w-full md:w-1/2 opacity-0 transition-opacity duration-700 ${ativo ? 'opacity-100' : 'opacity-0'}`}>
                         <div>
                             <h2 className='text-primary-02 text-4xl md:text-6xl font-bold'>
                                 {dev.name} <span className='text-primary-01'>{dev.lastName}</span>
@@ -84,11 +86,7 @@ const ContainerStories = () => {
                         </div>
                         <div>
                             <p className='text-primary-02 text-2xl'>{dev.description}</p>
-                            <a href={dev.linkedin} target="_blank" rel="noopener noreferrer">
-                                <button className='cursor-pointer flex items-center justify-center bg-primary-01 h-10 md:h-16 px-4 py-3 rounded-2xl mt-6'>
-                                    <p className='font-bold text-white text-[1rem] md:text-2xl'>Confira meu Linkedin</p>
-                                </button>
-                            </a>
+                            <Button icon={'../public/app/arrow.svg'} link={dev.linkedin} spanButton={'Massa, quero falar!'}/>
                         </div>
                     </div>
                 </div>
