@@ -30,7 +30,7 @@ const App = () => {
 
     return (
         <>
-            <main className="h-screen w-screen">
+            <main className="h-screen w-screen scroll-smooth">
                 <Header/>
                 <section className="relative h-full w-full overflow-hidden">
                     <video
@@ -53,7 +53,7 @@ const App = () => {
 
                 <div className='w-full h-4 bg-black'></div>
 
-                <section>
+                <section id='aboutUs'>
                     <Container>
                         <div className='flex flex-col-reverse md:flex-row justify-center items-center gap-6 md:gap-22'>
                             <div className='flex-col md:w-1/2'>
@@ -79,7 +79,7 @@ const App = () => {
                     </Container>
                 </section>
 
-                <section>
+                <section id='members'>
                     <ContainerStories/>
                 </section>
 

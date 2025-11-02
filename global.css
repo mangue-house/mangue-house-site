@@ -8,6 +8,10 @@
 }
 
 :root {
+
+    
+    @apply scroll-smooth;
+    
     --color-primary-01: #FF0033;
     --color-primary-02: #F2F2F2;
     --color-primary-03: #212121;
